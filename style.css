@@ -1,179 +1,102 @@
-/* Basis */
-html {
-  height: 100%;
-  width: 100%;
+<style>body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(to bottom right, #fffaf7, #f9f2ef);
+  color: #3e2b28;
 }
 
-body {
-  background-color: #ffffff;
-  color: #4e2e2e; /* varm mørk rødbrun */
-  font-family: 'Courier New', Courier, monospace;
-  margin: 2rem;
-  line-height: 1.6;
+.main-container {
   display: flex;
   flex-direction: row;
+  min-height: 100vh;
+  padding: 1rem;
+  gap: 2rem;
+  box-sizing: border-box;
 }
 
-/* Sidebar */
 .sidebar {
-  width: 250px;
+  width: 200px;
+  background: #f8f1f7;
   padding: 1rem;
-  background-color: #f6f0f8; /* blid rosa/lilla baggrund */
-  border-right: 2px solid #e0cfe2;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
+  border-right: 2px solid #e0d0d7;
 }
 
 .sidebar-title {
-  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-.sidebar-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #7b4c7b;
-  font-style: italic;
-}
-
 .sidebar-button {
   display: block;
-  margin: 0.4rem 0;
-  padding: 0.3rem 0.6rem;
-  background-color: #e8d5ec;
-  color: #4b1f4b;
-  border: none;
-  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  background: #ead9e4;
+  color: #3e2b28;
   text-decoration: none;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  font-size: 0.9rem;
 }
 
-.sidebar-button:hover {
-  background-color: #d3b9dd;
+.welcome-section {
+  flex: 1;
+  padding-top: 2rem;
+  text-align: center;
 }
 
-/* Blogindhold */
-h1, h2, h3 {
-  font-family: 'Brush Script MT', cursive;
-  color: #3e1e1e;
-}
-
-h1 {
+.welcome-section h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
   margin-bottom: 1rem;
 }
 
-.undertitel {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #9e6b60; /* varm, rolig rødbrun */
-  margin-top: -1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Underskrift */
-.signature {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
-  color: #5e3c58; /* dyb lilla-rosa */
-  text-align: center;
-  margin-top: 3rem;
-}
-
-/* Indhold til højre for sidebar */
-body > :not(.sidebar) {
-  margin-left: 270px;
-}
-.blog-post {
-  background-color: #fff7f2;
-  border-left: 4px solid #e6c7bd;
-  padding: 1.5rem;
-  margin-top: 2rem;
+.poetic-lines {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  white-space: pre-line;
+  line-height: 1.8;
   margin-bottom: 2rem;
-  border-radius: 0.5rem;
+}
+
+.blog-area {
+  max-width: 400px;
+  padding-top: 2rem;
+  font-size: 0.95rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.blog-area h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
 }
 
 .post-date {
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #b07e6e;
+  font-size: 0.8rem;
+  color: #876;
   margin-bottom: 1rem;
 }
 
 .post-signature {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
   text-align: right;
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.5rem;
-  color: #5e3c58;
-  margin-top: 2rem;
-}
-/* Centreret hovedindhold og smal spalte */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
+  margin-top: 1.5rem;
 }
 
-.sidebar {
-  min-width: 200px;
-  max-width: 240px;
-  margin-right: 2rem;
+@media (max-width: 800px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #e0d0d7;
+  }
+
+  .blog-area {
+    max-width: 100%;
+  }
 }
 
-.blog-content {
-  flex: 1;
-  max-width: 600px;
-}
-
-.blog-post {
-  max-width: 400px;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  margin-top: 2rem;
-  word-break: break-word;
-}
-
-.main-content {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* Trin 3: Smalt og harmonisk blog-layout */
-.main-content {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  text-align: left;
-}
-
-.blog-intro {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.25rem;
-  color: #4a2d4e;
-  line-height: 2;
-  margin-bottom: 2rem;
-}
+</style>
