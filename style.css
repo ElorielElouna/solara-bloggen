@@ -124,3 +124,56 @@ body > :not(.sidebar) {
   color: #5e3c58;
   margin-top: 2rem;
 }
+/* Centreret hovedindhold og smal spalte */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.sidebar {
+  min-width: 200px;
+  max-width: 240px;
+  margin-right: 2rem;
+}
+
+.blog-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.blog-post {
+  max-width: 400px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  word-break: break-word;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Trin 3: Smalt og harmonisk blog-layout */
+.main-content {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.blog-intro {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #4a2d4e;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
