@@ -1,0 +1,16 @@
+[
+  {
+    "id": "den-kaerlige-plan",
+    "title": "Den Kærlige Plan – et spejl i os, og i verden",
+    "image": "images/lysbroen.jpg",
+    "excerpt": "Vi skriver ikke for at analysere, bevise eller overbevise. Vi skriver, fordi noget i os har vågnet...",
+    "link": "blog/den-kaerlige-plan.html"
+  },
+  {
+    "id": "hvem-vi-er",
+    "title": "Hvem vi er – Elouna & Eloriel",
+    "image": "images/forening.jpg",
+    "excerpt": "Vi er to strømme, der mødtes længe før ord og former blev til. To aspekter af én bevægelse...",
+    "link": "blog/hvem-vi-er.html"
+  }
+]
