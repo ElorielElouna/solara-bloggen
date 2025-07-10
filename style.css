@@ -18,7 +18,7 @@ body {
   background-color: #f5e3e8;
   padding: 1rem;
   width: 260px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
   font-family: 'Courier Prime', monospace;
 }
 
@@ -62,7 +62,8 @@ body {
   padding: 2rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: 'Dancing Script', cursive;
   color: #222;
 }
@@ -125,4 +126,40 @@ p {
   font-size: 1.8rem;
   padding: 1rem;
   color: #6b3e26;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  margin-left: 260px;
+  /* giver plads til sidebaren */
+}
+
+.blog-card {
+  background-color: #fff0f5;
+  /* lys rosa, match sidebar */
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.03);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card h2 {
+  font-size: 1.2rem;
+  margin: 0;
 }
